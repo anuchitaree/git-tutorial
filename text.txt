@@ -1,6 +1,38 @@
-This is text 1
-update file to test github
-update file to local from github
-This is bla bla baa
-bla bla bal
+dev-s0.5-pik
 
+git init # build folder
+git add .   # add all file in repository
+git commit -m "comment"  # commit log hisotry
+# กรณี ที่ยังไม่มีการ 
+git remote add orign https://gitlab.com/dot-asterisk/customapp-platform/private/diat/samples.git
+
+##############################################################################
+#Upload 
+git push -u origin dev-s0.5-pik
+
+#Build branch
+git branch dev-s0.5-pik       # สร้าง branch ใน local
+git branch -a                 # list  ว่า มีอยู่จริง 
+git branch                     #  ทำงานอยู่  branchไหน สังเกตุ  *
+git push -u origin dev-s0.5-pik  # upload to remote   ทำหลังจาก add remote origin url
+
+
+#Leave branch to 
+git checkout dev-s0.5-pik      # Leave   and go to dev-s0.5-pik   
+
+#delete branch 
+git branch -d dev-s0.5-pik  # ลบ branch ใน local
+git push origin --delete dev-s0.5-pik   # ลบ branch ใน remote
+
+# see remote origin ว่าใช้ตัวไหนอยู่
+git remote show origin
+git remote -v  
+
+# Change remote origin 
+git remote set-url origin https://gitlab.com/dot-asterisk/customapp-platform/private/diat/samples.git
+
+#Copy branch
+git branch -c devOld devNew
+
+#Clone app
+git clone <url>
